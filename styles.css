@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@100..900&display=swap');
+
+* , *::before , *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    /* primary colors */
+    --bright-orange-clr:hsl(31, 77%, 52%);
+    --Dark-cyan-clr: hsl(184, 100%, 22%) ;
+    --Very-dark-cyan-clr: hsl(179, 100%, 13%);
+
+    /* paragraphs */
+    --Transparent-white-clr: hsla(0, 0%, 100%, 0.75); 
+
+    /* background, headings, buttons */
+    --Very-light-gray-clr : hsl(0, 0%, 95%);
+
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: var(--Very-light-gray-clr);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 9px;
+    margin:2rem;
+    overflow: hidden;
+    /* gap: 1rem; */
+}
+
+
+.card1{
+    background-color: var(--bright-orange-clr);
+}
+
+.card2{
+    background-color: var(--Dark-cyan-clr);
+}
+
+.card3{
+    background-color: var(--Very-dark-cyan-clr);
+}
+
+.box{
+    padding: 40px;
+}
+
+img{
+    display: block;
+    margin-bottom: 34px;
+}
+
+.title{
+    font-size: 2.5rem;
+    color: var(--Very-light-gray-clr);
+    font-family: 'Big Shoulders Display' ,'cursive';
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    font-weight: 700;
+
+}
+
+.desc{
+    color: var(--Transparent-white-clr);
+    line-height: 1.7;
+    width:211px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    
+}
+
+a{
+    text-decoration: none;
+    background-color: var(--Very-light-gray-clr);
+    padding: 13px 27px;
+    border-radius: 26px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 2px solid var(--Very-light-gray-clr);
+    transition: all .4s ease-in-out;
+    font-weight: 400;
+}
+
+.card1 a{
+    color:var(--bright-orange-clr)
+}
+
+.card2 a {
+    color: var(--Dark-cyan-clr);
+}
+
+.card3 a {
+    color: var(--Very-dark-cyan-clr);
+}
+
+.box a:hover{
+    color: var(--Very-light-gray-clr);
+    background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+    .desc{
+        width:237px;
+    }
+    a{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper {
+        margin: 2rem .5rem;
+    }
+        .desc {
+            width: 237px;
+        }
+    
+        a {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+}
